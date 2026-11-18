@@ -1,0 +1,3 @@
+/* ---- shared helpers needed by units ---- */
+function others(arr,correct,n=3,f=x=>x){const pool=shuf(arr.filter(x=>f(x)!==f(correct)));const out=[],seen=new Set([f(correct)]);for(const x of pool){if(out.length>=n)break;if(!seen.has(f(x))){seen.add(f(x));out.push(x)}}return out}
+const ABOUT=[["What's your name?","My name is …"],["How old are you?","I am … years old."],["Where are you from?","I am from …"],["What's your nationality?","I am …"],["What's your job?","I am a student."],["Where are you now?","I am at home."],["How are you today?","I am fine, thanks."],["Who is your best friend?","My best friend is …"],["Are you married?","No, I'm not."],["Is your teacher nice?","Yes, she is."]];
